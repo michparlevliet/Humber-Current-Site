@@ -1,0 +1,156 @@
+/* DEFAULT */
+body {
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+}
+/* HEADER */
+header {
+  display:flex;
+  flex-flow:row wrap;
+  /* margin:0 1em; */
+}
+.header {
+  flex: 0 0 100%;
+  display:flex;
+  flex-flow:nowrap;
+}
+#logo-title {
+  display:flex;
+  gap:2em;
+}
+#logo-title #humber {
+  flex: 1 0 0;
+  width:300px;
+  height:60px;
+}
+#logo-title #current {
+  flex: 1 0 0;
+  width:130px;
+  height:60px;
+}
+#menu-items {
+  display:flex;
+  gap:1em;
+  margin-left:auto;
+}
+
+/* NAV BAR */
+#main-nav {
+  flex:4 0 0;
+  /* margin:1em; */
+  padding:1em 1em 2em;
+}
+nav a {
+  font-family:'Open Sans', sans-serif;
+  font-size:0.9em;
+  color:black;
+  text-decoration: none;
+}
+#main-nav ul {
+  display:flex;
+  flex-flow:nowrap;
+  gap:2em;
+  margin:0;
+  padding:0;
+  /* padding-right:2em; */
+}
+#main-nav li {
+  display:inline-block;
+  /* text-align: center; */
+  flex:1 0 0;
+}
+#secondary-nav ul {
+  display:none;
+  
+}
+#main-nav li:hover #dropdown {
+  display:flex;
+  gap:3em;
+  margin-left:-100vw;
+  text-align:left;
+  padding:1em;
+  position:absolute;
+  background-color: lightgrey;
+}
+#dropdown li {
+  text-align: left;
+  display:inline-block;
+  flex: 1 0 0;
+  padding:1em;
+}
+
+/* HERO SECTION */
+
+.hero-image-container {
+  display: flex;
+  padding:2em 5em;
+  gap:2em;
+  background-color: lightgrey;
+  margin:0;
+}
+
+.article-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap:2em;
+}
+
+.article-box-top {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: solid black;
+  /* margin-right: 30px; */
+}
+
+#learn-more-btn {
+  margin-top: 2em;
+}
+
+
+#hero-slideshow {
+  margin-left:auto;
+}
+#image1 {
+  max-width:100%;
+  max-height:20%;
+}
+
+/* PROJECTS */
+
+#section-title {
+  padding:0 2.5em;
+}
+
+.project-flex-container {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  gap: 3em;
+  padding:1em;
+}
+
+.project-container {
+  flex: 0 0 40%;
+  border: solid black;
+}
+
+#load {
+  display:flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+.load-btn {
+  align-self: auto;
+}
+
+.suggested-titles {
+  padding: 0 3em;
+}
+.interest-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 4.5em;
+}
+
+
