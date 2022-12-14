@@ -2,12 +2,18 @@
 body {
   margin:0;
   font-family:'Open Sans', sans-serif;
+  background-color: #F7FAFF;
 }
+
+button:hover {
+  background-color: #B0BECB !important;
+}
+
 /* HEADER */
 header {
   display:flex;
   flex-flow:row wrap;
-  /* margin:0 1em; */
+  background-color: white;
 }
 .header {
   flex: 0 0 100%;
@@ -32,13 +38,17 @@ header {
   display:flex;
   gap:1em;
   margin-left:auto;
+  align-items: center;
+}
+#menu-items img {
+  max-height: 1.75em;
 }
 
 /* NAV BAR */
 #main-nav {
-  flex:4 0 0;
-  /* margin:1em; */
-  padding:1em 1em 2em;
+  flex:1 0 0;
+  margin:0;
+  padding:1em 1em 2em 1em;
 }
 nav a {
   font-family:'Open Sans', sans-serif;
@@ -48,15 +58,16 @@ nav a {
 }
 #main-nav ul {
   display:flex;
-  flex-flow:nowrap;
-  gap:2em;
+  flex-flow:row;
   margin:0;
   padding:0;
-  /* padding-right:2em; */
+  justify-content: space-evenly;
 }
 #main-nav li {
   display:inline-block;
-  /* text-align: center; */
+  margin:0;
+  padding:0;
+  text-align: center;
   flex:1 0 0;
 }
 #secondary-nav ul {
@@ -66,17 +77,22 @@ nav a {
 #main-nav li:hover #dropdown {
   display:flex;
   gap:3em;
-  margin-left:-100vw;
+  left: 0;
+  margin-top: 1em;
   text-align:left;
-  padding:1em;
-  position:absolute;
-  background-color: lightgrey;
+  padding:1em 2em;
+  position: absolute;
+  background-color: #345C81;
 }
 #dropdown li {
   text-align: left;
   display:inline-block;
   flex: 1 0 0;
   padding:1em;
+  
+}
+#dropdown li a {
+  color:white;
 }
 
 /* HERO SECTION */
@@ -85,7 +101,7 @@ nav a {
   display: flex;
   padding:2em 5em;
   gap:2em;
-  background-color: lightgrey;
+  background-color: #DFE6ED;
   margin:0;
 }
 
@@ -99,21 +115,40 @@ nav a {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: solid black;
-  /* margin-right: 30px; */
+  background-color: #B0BECB;
+  display:flex;
+  flex-flow:column;
+  align-items: center;
+}
+
+.icon {
+  max-width: 50%;
+  padding-top:1.5em;
+}
+
+#captions {
+  display:flex;
+  flex-flow:row;
+  gap:1em;
+  justify-content: flex-start;
+}
+#captions p {
+  text-align:center;
+  flex: 0 0 19%;
 }
 
 #learn-more-btn {
-  margin-top: 2em;
+  /* margin-top: 2em; */
+  background-color: #345C81;
+  padding:1em 1.5em;
+  border: none;
+  border-radius: 1em;
+  color:white;
 }
 
 
 #hero-slideshow {
   margin-left:auto;
-}
-#image1 {
-  max-width:100%;
-  max-height:20%;
 }
 
 /* PROJECTS */
@@ -122,17 +157,75 @@ nav a {
   padding:0 2.5em;
 }
 
+form {
+  background-color: #DFE6ED;
+  padding:1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+select {
+  border-radius:1em;
+  border:none;
+  padding:0.5em 1em;
+  text-align: center;
+}
+#submit {
+  border-radius:1em;
+  border-color:#345C81;
+  padding:0.5em 1em;
+  text-align: center;
+  color:#345C81;
+  background-color: white;;
+}
+
 .project-flex-container {
   display: flex;
   flex-flow:row wrap;
   justify-content: center;
-  gap: 3em;
-  padding:1em;
+  gap: 2em;
+  padding:2em 2em;
 }
 
 .project-container {
+  background-color: white;
+  box-shadow: 0 3px 5px #DFE6ED;
+  border-radius: 1em;
   flex: 0 0 40%;
-  border: solid black;
+  background-color: white;
+  padding: 2em;
+}
+
+.project-image-container {
+  display: flex;
+  justify-content: center;
+}
+#image1 {
+  flex: 1 0 0;
+  max-width:50%;
+  box-shadow: 0 3px 5px #DFE6ED;
+  border-radius: 1em;
+}
+#save {
+  float: right;
+}
+.view-btn {
+  border-radius: 0.5em;
+  background-color: #345C81;
+  color:white;
+  border:none;
+  padding: 0.5em 1em;
+}
+
+#links button {
+  border-radius: 0.5em;
+  background-color: white;
+  padding: 0.5em 1em;
+  border: 0.5px #345C81 solid;
+}
+#links a {
+  text-decoration: none;
+  color:black;
 }
 
 #load {
@@ -142,15 +235,42 @@ nav a {
 }
 .load-btn {
   align-self: auto;
+  border-radius: 0.5em;
+  background-color: white;
+  padding: 0.5em 1em;
+  border: 0.5px #345C81 solid;
 }
 
-.suggested-titles {
-  padding: 0 3em;
-}
+
+/* SUGGESTED ARTICLES */
+
 .interest-wrapper {
   display: flex;
-  flex-direction: row;
-  margin: 0 4.5em;
+  flex-flow: row wrap;
+  padding: 2em 4em;
 }
+.interest-container {
+  flex: 0 0 100%;
+  margin:0;
+  padding:0;
+}
+#wrapper1, #wrapper3 {
+  background-color: white;
+}
+#wrapper2 {
+  background-color: #DFE6ED;
+}
+.article-box {
+  flex:0 0 20%;
+  max-height: 10em;
+  margin: 0;
+}
+.article-box img {
+  max-width:100%;
+  max-height:100%;
+  box-shadow: 0 3px 5px #DFE6ED;
+  border-radius: 5%;
+}
+
 
 
